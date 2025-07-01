@@ -1,81 +1,93 @@
 # On-Time-Delivery-Prediction-for-E-Commerce-Shipments-Using-Machine-Learning
-This project involves building and evaluating machine learning models to predict whether a shipment will be delivered on time, using historical logistics data from an e-commerce company.
-
 Project Overview
-The goal is to develop a classification model that can accurately determine whether a product shipment will reach the customer on time. Timely deliveries are critical for customer satisfaction and operational efficiency in e-commerce logistics.
+This project aims to predict whether a product shipment will reach the customer on time using machine learning techniques. The dataset contains logistics-related information such as shipment method, product weight, discounts, and customer feedback. The goal is to build a classification model that can accurately predict delivery punctuality, helping businesses streamline operations and improve customer satisfaction.
 
 Problem Statement
-Objective:
-Predict whether a shipment is delivered on time based on a variety of features, including product details, customer interactions, shipping method, and logistics factors.
+In e-commerce logistics, late deliveries can lead to customer dissatisfaction and increased operational costs. Predicting on-time delivery allows businesses to proactively manage delays and optimize resource allocation. This project uses historical shipment data to build a predictive model for delivery outcomes.
 
-Target Variable:
-Reached.on.Time_Y.N (0 = Not on time, 1 = On time)
+Objective
+Perform data preprocessing including handling of missing values and negative values due to normalization.
 
-Dataset
-Number of Records: 10,999
+Conduct exploratory data analysis (EDA) to understand feature distributions and relationships.
 
-Number of Features: 12
+Encode categorical variables and normalize/scale numerical features.
 
-Source: Provided as part of the Data Science Bootcamp project
+Train multiple machine learning models for binary classification of delivery status.
 
-Key Features:
-Customer_care_calls
+Evaluate and tune the models to maximize prediction performance.
 
-Customer_rating
+Compare models and select the most suitable one for deployment or insights.
 
-Cost_of_the_Product
+Dataset Description
+The dataset consists of 10,999 records and 12 features (excluding encoded dummies). The key features include:
 
-Prior_purchases
+Customer_care_calls: Number of calls made to customer service
 
-Product_importance
+Customer_rating: Customer rating of service (1–5)
 
-Discount_offered
+Cost_of_the_Product: Product price
 
-Weight_in_gms
+Prior_purchases: Number of previous purchases by the customer
 
-Mode_of_Shipment
+Product_importance: Product importance (low, medium, high)
 
-Warehouse_block
+Gender: Customer gender
 
-Workflow
-Data Preprocessing
+Discount_offered: Discount applied to the product
 
-Handling missing values
+Weight_in_gms: Product weight in grams
 
-Encoding categorical variables
+Mode_of_Shipment: Shipping method used (Ship, Flight, Road)
 
-Normalizing numerical features
+Warehouse_block: Warehouse origin block (A–F)
 
-Exploratory Data Analysis (EDA)
+Reached.on.Time_Y.N: Target variable (0 = Not on time, 1 = On time)
 
-Distribution plots, box plots
+Techniques Used
+Data Cleaning and Preprocessing
 
-Bar charts for categorical variables
+Handling of normalization issues and negative values
 
-Correlation heatmaps and pair plots
+Label and One-Hot Encoding for categorical variables
 
-Model Building
+Data Visualization (histograms, box plots, bar charts, heatmaps, pair plots)
+
+Machine Learning Models:
 
 Logistic Regression
 
-Random Forest
-
 Decision Tree
+
+Random Forest
 
 Support Vector Machine (SVM)
 
 XGBoost
 
-Model Evaluation
+Hyperparameter Tuning (GridSearchCV)
 
-Accuracy, Precision, Recall, F1-score
+Model Evaluation using:
+
+Accuracy
+
+Precision
+
+Recall
+
+F1-score
 
 Confusion Matrix
 
-ROC Curve & AUC
+ROC Curve and AUC Score
 
-Insights and Recommendations
+Results
+Random Forest and XGBoost delivered strong results with high accuracy and generalization.
 
-Key factors affecting late deliveries
+Logistic Regression provided a good baseline and interpretable coefficients.
 
-Business strategies based on findings
+Hyperparameter tuning improved model performance across all models.
+
+Final model selected based on trade-off between performance metrics and interpretability.
+
+Conclusion
+This project demonstrates a complete machine learning pipeline for binary classification using real-world logistics data. The analysis highlights the importance of discount offered, mode of shipment, and product weight in predicting delivery outcomes. The chosen model can help e-commerce companies proactively manage shipments and enhance logistics planning.

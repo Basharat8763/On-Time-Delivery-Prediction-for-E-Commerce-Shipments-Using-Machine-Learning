@@ -33,17 +33,16 @@ The dataset consists of 10,999 records and 12 features (excluding encoded dummie
 - Handling of normalization issues and negative values  
 - Label and One-Hot Encoding for categorical variables  
 - Data Visualization:
-  - Histograms  
   - Box plots  
   - Bar charts  
-  - Heatmaps  
-  - Pair plots  
+  - Heatmaps
+  - Pie charts
+ 
 - Machine Learning Models:
   - Logistic Regression  
   - Decision Tree  
-  - Random Forest  
-  - Support Vector Machine (SVM)  
-  - XGBoost  
+  - Random Forest
+    
 - Hyperparameter Tuning (GridSearchCV)  
 - Model Evaluation using:
   - Accuracy  
@@ -51,7 +50,6 @@ The dataset consists of 10,999 records and 12 features (excluding encoded dummie
   - Recall  
   - F1-score  
   - Confusion Matrix  
-  - ROC Curve and AUC Score
 
 ## Results  
 - Random Forest and XGBoost delivered strong results with high accuracy and generalization.  
